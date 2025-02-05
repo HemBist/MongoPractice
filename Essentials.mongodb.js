@@ -2,7 +2,7 @@
 db.createCollection('Essentials')
 
 //Inserting document
-db.HomeTest.insertOne(
+db.Essentials.insertOne(
 {
   "Id": 11111,
   "Name": "Hem Bisht",

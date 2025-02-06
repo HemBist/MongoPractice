@@ -1,4 +1,43 @@
 //Types of Documnets
+
+//***********$lookup**************** */
+db.createCollection('EmployeeRecords')
+db.createCollection('DeptDetails')
+//Inserting into EmployeeRecords
+db.EmployeeRecords.insertMany
+(
+[
+{"_id":1,Name:"Hem",Email:"hem.bisht20@gmail.com"},
+{"_id":2,Name:"Hem Bisht",Email:"hem.bisht21@gmail.com"}
+]
+)
+
+//Inserting into DeptDetails
+db.DeptDetails.insertMany
+(
+[
+{"_id":1,Contact:8595738051,Deparment:"HR"},
+{"_id":2,Contact:8595738055 ,Deparment:"Finance"},
+{"_id":3,Contact:8595738057,Deparment:"Testing"},
+]
+)
+
+//$lookup
+db.EmployeeRecords.aggregate(
+    [
+{
+$lookup: 
+{
+  from: "DeptDetails",
+  localField: "_id",
+  foreignField: "_id",
+  as: "DeptDetails"
+}
+}
+]
+)
+
+
 //Creating a collection EmpRecords
 db.createCollection('EmpRecords')
 //Inserting many records at a time

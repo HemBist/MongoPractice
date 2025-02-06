@@ -1096,6 +1096,31 @@ db.Essentials.insertOne(
 
 
 
+//Updating the Rate using $set
+db.HomeEssentials.updateOne({Id: 11111,"Kitchen.Name":"Pans"},
+  {$set :{"Kitchen.$.Rate":115}}
+)
+
+
+//Updating the Rate using $inc
+db.HomeEssentials.updateOne({Id: 11111,"Kitchen.Name":"Pans"},
+  {$inc :{"Kitchen.$.Rate":10}}
+)
+
+//Updating the Unit using $set
+db.HomeEssentials.updateOne({Id: 11111,"Kitchen.Name":"Pans"},
+  {$set :{"Kitchen.$.Unit":5}}
+)
+
+
+//Updating the Unit  using $inc
+db.HomeEssentials.updateOne({Id: 11111,"Kitchen.Name":"Pans"},
+  {$inc :{"Kitchen.$.Unit":10}}
+)
+
+
+
+
 
 //It will retrun Pots details from Kitchen Array
 db.HomeEssentials.find({Id:11111},

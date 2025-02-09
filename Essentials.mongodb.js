@@ -2323,4 +2323,218 @@ db.HomeEssentials.updateOne({Id:11111},
   {$pop :{Kitchen :-1}}
 )
 
+//Sorted documents
+db.Essentials.insertOne
+({
+  "Id": 11111,
+  "Name": "Hem Bisht",
+  "Work": "Home Work",
+  "Purpose": "List of Home Essentials",
+  "HomeEssentialsSections": [
+    "Kitchen",
+    "Dining",
+    "Bedroom",
+    "Bathroom",
+    "Living Room",
+    "Cleaning Supplies",
+    "Laundry",
+    "Basic Things"
+  ],
+  "Kitchen": [
+    {
+      "Name": "Pans",
+      "Unit": 5,
+      "Rate": 115
+    },
+    {
+      "Name": "Baking",
+      "Unit": 1,
+      "Rate": 112
+    },
+    {
+      "Name": "sheets",
+      "Unit": 1,
+      "Rate": 113
+    }
+  ],
+  "Dining": [
+    {
+      "Name": "Plastic Bowls",
+      "Unit": 1,
+      "Rate": 110
+    },
+    {
+      "Name": "Steel Bowls",
+      "Unit": 1,
+      "Rate": 111
+    },
+    {
+      "Name": "Plastic Plate",
+      "Unit": 1,
+      "Rate": 112
+    }
+  ],
+  "Bedroom": [
+    {
+      "Name": "Sheets",
+      "Unit": 1,
+      "Rate": 1100
+    },
+    {
+      "Name": "pillowcases",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "Bathroom": [
+    {
+      "Name": "Toothbrush",
+      "Unit": 1,
+      "Rate": 100
+    },
+    {
+      "Name": "toothpaste",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "LivingRoom": [
+    {
+      "Name": "Almira",
+      "Unit": 1,
+      "Rate": 10000
+    },
+    {
+      "Name": "chairs",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "CleaningSupplies": [
+    {
+      "Name": "Vacuum Cleaner",
+      "Unit": 1,
+      "Rate": 1000
+    },
+    {
+      "Name": "Broom and Dustpan",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "Laundry": [
+    {
+      "Name": "Laundry Basket",
+      "Unit": 1,
+      "Rate": 1000
+    },
+    {
+      "Name": "Detergent ",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "BasicTools": [
+    {
+      "Name": "Screwdriver",
+      "Unit": 1,
+      "Rate": 1000
+    },
+    {
+      "Name": " hammer",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "Vegetables": [
+    "Leafy Greens",
+    "Root Vegetables",
+    "Aromatic Vegetables",
+    "Squash Varieties",
+    "Cruciferous Vegetables",
+    "Common Vegetables",
+    "Herbs and Flavoring Vegetables",
+    "Seasonal or Specialty Vegetables"
+  ],
+  "VegetableDetails": [
+    {
+      "Name": "Spinach",
+      "Unit": 1,
+      "Rate": 1000
+    },
+    {
+      "Name": " Lettuce",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "Spice": [
+    "Basic Spices",
+    "Warm and Aromatic Spices",
+    "Earthy Spices",
+    "Heat-Spicing Options",
+    "Savory Herbs",
+    "Seeds",
+    "Specialty Spices",
+    "Spice Blends"
+  ],
+  "SpicesDetails": [
+    {
+      "Name": "Salt",
+      "Unit": 1,
+      "Rate": 100
+    },
+    {
+      "Name": "BlackPepper",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "Dal_Lentils": [
+    "Split Bengal Gram",
+    "Split Pigeon Peas",
+    "Split Green Gram",
+    "Masoor Dal",
+    "Urad Dal",
+    "Rajma",
+    "Lobia",
+    "Split Yellow Peas",
+    "Horse Gram",
+    "Green Gram",
+    "Brown Lentils",
+    "French Green Lentils",
+    "Beans",
+    "Beluga"
+  ],
+  "Dal_LentilDetails": [
+    {
+      "Name": "Split Bengal Gram",
+      "Unit": 1,
+      "Rate": 100
+    },
+    {
+      "Name": "Split Pigeon Peas",
+      "Unit": 1,
+      "Rate": 111
+    }
+  ],
+  "TeaTypes": [
+    {
+      "Name": "Green Tea",
+      "Unit": 1,
+      "Rate": 318,
+      "Flavor": "Light, grassy, slightly sweet",
+      "CaffeineLevel": "Moderate",
+      "HealthBenefits": "Rich in antioxidants, boosts metabolism, good for heart health"
+    },
+    {
+      "Name": "Lemongrass Tea",
+      "Unit": 1,
+      "Rate": 319,
+      "Flavor": "Citrusy, light",
+      "CaffeineLevel": "Caffeine-free",
+      "HealthBenefits": " Supports digestion, has antibacterial properties, relieves anxiety"
+    }
+  ]
+})
 

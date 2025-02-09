@@ -2323,7 +2323,7 @@ db.HomeEssentials.updateOne({Id:11111},
   {$pop :{Kitchen :-1}}
 )
 
-//Sorted documents
+//Documents
 db.Essentials.insertOne
 ({
   "Id": 11111,

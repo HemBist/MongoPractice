@@ -1,5 +1,68 @@
 //Types of Documnets
 
+
+//**********Merge- will not show message ,in case of error their will be a message..**********
+
+
+//Inserting into EmployeeRecords
+db.EmployeeRecords.insertMany
+(
+[
+{"_id":11,Name:"Hem",Email:"hem.bisht20@gmail.com"},
+{"_id":12,Name:"Hem Bisht",Email:"hem.bisht21@gmail.com"},
+{"_id":13,Name:"Hem Bishtttt",Email:"hem.bisht@gmail.com"}
+]
+)
+
+
+//Inserting into DeptDetails
+db.DeptDetails.insertMany
+(
+[
+{"_id":11,Contact:8595738051,Deparment:"HR"},
+{"_id":12,Contact:8595738055 ,Deparment:"Finance"},
+{"_id":13,Contact:8595738057,Deparment:"Testing"},
+]
+)
+
+
+
+//Merging EmployeeRecords Collection into Deptdetails
+db.EmployeeRecords.aggregate(
+  [{$match :{_id:12}},
+{
+$merge: 
+{
+into: "DeptDetails",
+on: ["_id"],
+whenMatched: "merge",
+  whenNotMatched: "insert"
+}
+}
+]
+)
+
+
+//Merging Deptdetails into EmployeeRecords
+db.DeptDetails.aggregate(
+  [{ $match:{_id:13}},
+{
+$merge: 
+{
+into: "EmployeeRecords",
+on: ["_id"],
+whenMatched: "merge",
+whenNotMatched: "insert"
+}
+}
+]
+)
+
+
+//Id=13
+db.EmployeeRecords.aggregate([{$match:{_id:13}}]
+)
+
 //***********$lookup**************** */
 db.createCollection('EmployeeRecords')
 db.createCollection('DeptDetails')

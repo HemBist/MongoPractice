@@ -1582,7 +1582,7 @@ TeaTypesSummary: [
           Total: {
             $add: [
                 { $ifNull: [{ $arrayElemAt: ["$KitchenSummary.KitchenTotalAmount", 0] }, 0] },
-                { $ifNull: [{ $arrayElemAt: ["$BedrommSummary.BedroomTotalAmount", 0] }, 0] },
+                { $ifNull: [{ $arrayElemAt: ["$BedroomSummary.BedroomTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$DiningSummary.DiningTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$BathroomSummary.BathroomTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$LivingRoomSummary.LivingRoomTotalAmount", 0] }, 0] },

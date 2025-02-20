@@ -19,9 +19,9 @@ db.EmployeeRecords.insertMany
 db.DeptDetails.insertMany
 (
 [
-{"_id":11,Contact:8595738051,Deparment:"HR"},
-{"_id":12,Contact:8595738055 ,Deparment:"Finance"},
-{"_id":13,Contact:8595738057,Deparment:"Testing"},
+{"_id":11,Deparment:"HR"},
+{"_id":12,Deparment:"Finance"},
+{"_id":13,Deparment:"Testing"},
 ]
 )
 
@@ -79,9 +79,9 @@ db.EmployeeRecords.insertMany
 db.DeptDetails.insertMany
 (
 [
-{"_id":1,Contact:8595738051,Deparment:"HR"},
-{"_id":2,Contact:8595738055 ,Deparment:"Finance"},
-{"_id":3,Contact:8595738057,Deparment:"Testing"},
+{"_id":1,Deparment:"HR"},
+{"_id":2,Deparment:"Finance"},
+{"_id":3,Deparment:"Testing"},
 ]
 )
 

@@ -1747,7 +1747,7 @@ db.HomeEssentials.aggregate([
         $group: {
             _id: null,
             SelectedItem:{$addToSet:"$Dal_LentilDetails.Name"},
-            Dal_LentilDetailsTotalAmount: { $sum: { $multiply: ["$Dal_LentilDetails.Rate", "$Dal_LentilDetails.Unit" ] } },
+            Dal_LentilsTotalAmount: { $sum: { $multiply: ["$Dal_LentilDetails.Rate", "$Dal_LentilDetails.Unit" ] } },
             Dal_LentilDetailsCount: { $sum: 1 }
         }
     },
@@ -1796,7 +1796,7 @@ TeaTypesSummary: [
                 { $ifNull: [{ $arrayElemAt: ["$BasicSummary.BasicTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$VegetableDetailsSummary.VegetableDetailsTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$SpicesDetailSummary.SpicesDetailsTotalAmount", 0] }, 0] },
-                { $ifNull: [{ $arrayElemAt: ["$DalDetailsSummary.DalDetailsTotalAmount", 0] }, 0] },
+                { $ifNull: [{ $arrayElemAt: ["$DalDetailsSummary. Dal_LentilsTotalAmount", 0] }, 0] },
                 { $ifNull: [{ $arrayElemAt: ["$TeaTypesSummary.TeaTypesTotalAmount", 0] }, 0] },
             ]
         }

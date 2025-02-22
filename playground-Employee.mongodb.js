@@ -1927,6 +1927,8 @@ db.Manager.find({
 
   //Creating Index
 // Creating index for Email duplicate value
+//db.CollectionName.createIndex({FieldName:1},{unique:true})
+
 db.createCollection('Emp')
 db.Emp.createIndex({Email:1},{unique:true})
 db.Emp.insertOne({Id:1,Name:"Hem",Email:"hem.bisht20@gmail.com"})

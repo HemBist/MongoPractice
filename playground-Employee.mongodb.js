@@ -800,8 +800,7 @@ db.ArrayType.find({comments:'HMMMMMMMMMMMMMMM'})
           {Name :"Nickelodeon Kids' Choice Awards India",Count:1},
           {Name :"Iconic Gold Awards",Count:1}
   ],
-  FavouritePlace:"Samundar",
-  FavouriteMovie:"Andaz Apna Apna",
+  
   FavouriteDialouge:"Pushpa! I hate tears",
   FavouriteActor: "Amitabh Bachchan",
   FavouriteActress:"Madhuri Dixit"
